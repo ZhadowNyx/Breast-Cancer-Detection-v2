@@ -68,8 +68,8 @@ cnn_model = Sequential([
 cnn_model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy', 'AUC', 'Precision', 'Recall'])
 
 # Early stopping and learning rate reduction callbacks
-early_stopping = EarlyStopping(monitor='val_loss', patience=20, restore_best_weights=True)
-lr_reduction = ReduceLROnPlateau(monitor='val_loss', patience=15, factor=0.5, min_lr=1e-6)
+early_stopping = EarlyStopping(monitor='val_loss', patience=10, restore_best_weights=True)
+lr_reduction = ReduceLROnPlateau(monitor='val_loss', patience=8, factor=0.5, min_lr=1e-6)
 
 # Train the CNN model with validation and early stopping
 history = cnn_model.fit(
