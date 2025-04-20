@@ -26,6 +26,7 @@ The dataset has an imbalanced distribution:
 | **Total**     | **2480** | **5429**  | **7909** | **31.4%** | **68.6%** |
 
 ## Project Structure
+``` bash
 .
 ├── Basic CNN Training/
 │   ├── cnn_training_patience10.py         # CNN model with patience=10
@@ -77,7 +78,7 @@ The dataset has an imbalanced distribution:
     ├── old_cnn_implementation.py
     ├── previous_data_processing.py
     └── legacy_training_scripts.py
-
+```
 
 ## Methodology
 
