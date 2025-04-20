@@ -1,4 +1,6 @@
 # Breast Cancer Detection using Deep Learning
+## A Comparative Study of Supervised and Self-Supervised Techniques on Histopathological Images for Breast Cancer Diagnosis using Deep Learning
+
 
 ## Overview
 This project implements and compares three different deep learning approaches for breast cancer diagnosis using histopathological images. Using the BreaKHis dataset, we classify breast cancer images into benign and malignant categories through:
@@ -178,6 +180,16 @@ All three models were trained with the following configurations:
 4. **Robustness & Interpretability Studies**:
    - Conduct adversarial-noise and occlusion tests
    - Leverage explainability tools like Grad CAM and LIME
+  
+## Dependencies
+
+- TensorFlow 2.x
+- PyTorch
+- scikit-learn
+- NumPy
+- Pandas
+- Matplotlib
+- OpenCV
 
 ## Installation & Usage
 
