@@ -125,9 +125,9 @@ All three models were trained with the following configurations:
 
 | Model | Accuracy | Precision | Recall | F1-Score | AUC-ROC |
 |-------|----------|-----------|--------|----------|---------|
-| Basic CNN | 0.68 | 0.70 | 0.65 | 0.67 | 0.73 |
-| ResNet50 (Transfer Learning) | 0.88 | 0.89 | 0.87 | 0.88 | 0.92 |
-| SimCLR + ResNet18 | 0.91 | 0.92 | 0.91 | 0.92 | 0.95 |
+| Basic CNN | 0.91 | 0.90 | 0.89 | 0.90 | 0.97 |
+| ResNet50 (Transfer Learning) | 0.98 | 0.97 | 0.97 | 0.98 | 0.99 |
+| SimCLR + ResNet18 | 0.85 | 0.84 | 0.82 | 0.83 | 0.95 |
 
 ### Key Findings
 
@@ -191,3 +191,25 @@ pip install -r requirements.txt
 
 # Run the model training
 python train.py --model [cnn|resnet50|simclr]
+```
+
+## Running TensorFlow/PyTorch on GPU Locally
+
+To efficiently train deep learning models, we set up GPU acceleration using the following configurations:
+
+### 1. TensorFlow-GPU Support and Compatibility
+- Since TensorFlow-GPU support for Windows 10 was discontinued after version **2.10.0**, we ensured compatibility by using **Python 3.9.11** and **TensorFlow 2.10.0**.
+- This allows TensorFlow to leverage GPU acceleration efficiently without encountering compatibility issues.
+
+### 2. CUDA and cuDNN Setup
+- **CUDA v11.2** and **cuDNN v8.1** are installed to enable GPU acceleration.
+- These libraries provide the necessary interface for running deep learning operations on **NVIDIA GPUs**, significantly improving training speed.
+
+### 3. TensorRT for Optimized Inference
+- **TensorRT** is installed to optimize inference, enabling faster execution of deep learning models without compromising accuracy.
+- This helps in reducing latency during model deployment.
+
+### 4. PyTorch with CUDA
+- **PyTorch** is configured to use CUDA for GPU acceleration.
+- This ensures that SimCLR training benefits from hardware acceleration, leading to reduced training time and improved performance.
+
