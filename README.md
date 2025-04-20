@@ -1,4 +1,4 @@
-# Breast Cancer Detection using Deep Learning
+# Breast Cancer Detection using Deep Learning (v2)
 ## A Comparative Study of Supervised and Self-Supervised Techniques on Histopathological Images for Breast Cancer Diagnosis using Deep Learning
 
 
